@@ -1,9 +1,12 @@
 # Clean Blender (Legacy) Add-on Template
-## Complete add-on structure formatted with Black + hot-reloadable in Blender
+## ✨ Complete add-on structure • Hot-reloadable in Blender • Formatted with Black ✨
 
-This project is meant to be a general starting point for legacy Blender add-on development in `bpy`. Anything non-obvious will be commented. The project is very minimal by design and is meant to be placed inside of a [script directory](https://docs.blender.org/manual/en/latest/editors/preferences/file_paths.html#script-directories).  
-The script directory may exist in your Github directory
+This project is meant to be a general starting point for legacy Blender add-on development with Blender Python (bpy).  
+Anything non-obvious will be commented.  
+The project is very minimal by design.
 
+I suggest placing your add-on inside of a [script directory](https://docs.blender.org/manual/en/latest/editors/preferences/file_paths.html#script-directories) for ease of use.  
+The script directory may exist in your Github directory.  
 ```
 Github/
 ├── Blender/ (script directory)
@@ -11,7 +14,9 @@ Github/
 │            └── clean-blender-addon-template/ (my local repo)
 │            └── epic-legendary-addon/ (your local fork)
 ```
-Features
+(Remember to install your script directory in Blender *Preferences > File Paths > Script Directories*)
+
+### Features
 * Uses a multi file add-on structure
 * Able to reload in Blender with `bpy.ops.script.reload()`
 * Includes bl_info metadata

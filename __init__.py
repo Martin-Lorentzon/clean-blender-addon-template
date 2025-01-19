@@ -7,7 +7,6 @@ bl_info = {
     "location": "3D Viewport > N Panel > ...",
     # "doc_url": "https://github.com/{username}/{repo-name}",
     # "tracker_url": "https://github.com/{username}/{repo-name}/issues",
-    # "warning": "BETA Version",
     # "warning": "Pre-Release",
     "support": "COMMUNITY",
     "category": "Choose a category",  # Try to fit into an existing category (or your company name)

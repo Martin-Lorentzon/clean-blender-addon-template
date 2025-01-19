@@ -25,7 +25,7 @@ Github/
 * Functional comments for VSCode users (`MARK:`)
 * Formatted with Black (Line length 120 characters)
 
-Tips: Add the Reload operator to your Quick Favorites in Blender
+Tip: Add the Reload Scripts operator to your Quick Favorites in Blender
 
 ## Why is this not a template for the new extensions?
 Extensions don't mesh well with my personal use of Blender add-on development. I like placing my tools in one or more script directory and those tools won't get recognized as the new extension kind, don't ask me why.

@@ -1,7 +1,7 @@
 # Clean Blender (Legacy) Add-on Template
-## Complete add-on structure • Hot-reloadable in Blender • Formatted with Black
+## Complete add-on structure • Reloadable in Blender • Formatted with Black
 
-This project is meant to be a general starting point for legacy Blender add-on development with Blender Python (bpy).  
+This project is meant to be a good general starting point for legacy Blender add-on development.  
 Anything non-obvious will be commented.  
 The project is very minimal by design.
 

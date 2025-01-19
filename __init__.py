@@ -10,8 +10,7 @@ bl_info = {
     # "warning": "BETA Version",
     # "warning": "Pre-Release",
     "support": "COMMUNITY",
-    # Try to fit into an existing category (or your company name)
-    "category": "Choose a category",
+    "category": "Choose a category",  # Try to fit into an existing category (or your company name)
 }
 
 

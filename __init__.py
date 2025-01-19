@@ -29,6 +29,7 @@ else:
     # ...and here
     from . import hello_world_module
 
+# ...but not here
 import bpy
 
 

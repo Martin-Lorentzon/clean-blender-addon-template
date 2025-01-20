@@ -11,7 +11,6 @@ The script directory may exist in your Github directory.
 Github/
 ├── Blender/ (script directory)
 │      └── addons/
-│            └── clean-blender-addon-template/ (my local repo)
 │            └── epic-legendary-addon/ (your local fork)
 ```
 (Remember to install your script directory in Blender *Preferences > File Paths > Script Directories*)

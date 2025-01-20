@@ -4,7 +4,7 @@ bl_info = {
     "author": "Your Name",
     "version": (1, 0, 0),
     "blender": (4, 2, 0),
-    "location": "3D Viewport > N Panel > ...",
+    "location": "3D Viewport > N Panel > Hello World",  # Instructions on where to find the add-on
     # "doc_url": "https://github.com/{username}/{repo-name}",
     # "tracker_url": "https://github.com/{username}/{repo-name}/issues",
     # "warning": "Pre-Release",

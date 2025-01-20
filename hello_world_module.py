@@ -22,7 +22,7 @@ class TEMPLATE_PT_hello_world_panel(bpy.types.Panel):
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
     bl_category = "Hello World"
-    bl_context = "objectmode"
+    bl_context = "objectmode"  # Optional for limiting access to the panel to a certain context
 
     def draw(self, context):
         properties = context.scene.hello_world_properties
@@ -32,6 +32,7 @@ class TEMPLATE_PT_hello_world_panel(bpy.types.Panel):
         layout.label(text="Hello World")
         layout.prop(properties, "custom_1")
         layout.prop(properties, "custom_2")
+        layout.operator("template.hello_world")
 
 
 # ——————————————————————————————————————————————————

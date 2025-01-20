@@ -2,9 +2,9 @@ import bpy
 from bpy.props import FloatProperty, IntProperty
 
 
-# ——————————————————————————————————————————————————
+# ——————————————————————————————————————————————————————————————————————
 # MARK: PROPERTIES
-# ——————————————————————————————————————————————————
+# ——————————————————————————————————————————————————————————————————————
 
 
 class HelloWorldProperties(bpy.types.PropertyGroup):
@@ -12,9 +12,9 @@ class HelloWorldProperties(bpy.types.PropertyGroup):
     custom_2: IntProperty(name="My Int")
 
 
-# ——————————————————————————————————————————————————
+# ——————————————————————————————————————————————————————————————————————
 # MARK: INTERFACE
-# ——————————————————————————————————————————————————
+# ——————————————————————————————————————————————————————————————————————
 
 
 class TEMPLATE_PT_hello_world_panel(bpy.types.Panel):
@@ -35,9 +35,9 @@ class TEMPLATE_PT_hello_world_panel(bpy.types.Panel):
         layout.operator("template.hello_world")
 
 
-# ——————————————————————————————————————————————————
+# ——————————————————————————————————————————————————————————————————————
 # MARK: OPERATORS
-# ——————————————————————————————————————————————————
+# ——————————————————————————————————————————————————————————————————————
 
 
 class TEMPLATE_OT_hello_world_operator(bpy.types.Operator):

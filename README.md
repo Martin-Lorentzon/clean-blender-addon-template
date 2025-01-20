@@ -1,7 +1,7 @@
 # Clean Blender (Legacy) Add-on Template
 ## Complete add-on structure • Reloadable in Blender • Formatted with Black
 
-This project is meant to be a good general starting point for legacy Blender add-on development.  
+This project is meant to be a good general starting point for Blender add-on development.  
 Anything non-obvious will be commented.  
 The project is very minimal by design.
 

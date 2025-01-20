@@ -4,7 +4,7 @@ bl_info = {
     "author": "Your Name",
     "version": (1, 0, 0),
     "blender": (4, 2, 0),
-    "location": "3D Viewport > N Panel > Hello World",  # Instructions on where to find the add-on
+    "location": "3D Viewport > N Panel > Hello World",
     # "doc_url": "https://github.com/{username}/{repo-name}",
     # "tracker_url": "https://github.com/{username}/{repo-name}/issues",
     # "warning": "Pre-Release",
@@ -15,14 +15,14 @@ bl_info = {
 
 # ——————————————————————————————————————————————————
 # MARK: IMPORTS
-# —▼————————————————————————————————————————————————
+# ——————————————————————————————————————————————————
 
 
 if "bpy" in locals():
-    # Modules to reload during development go here
-    import importlib
+    from importlib import reload
 
-    importlib.reload(hello_world_module)
+    # Modules to reload during development go here
+    reload(hello_world_module)
 else:
     # ...and here
     from . import hello_world_module
@@ -33,7 +33,7 @@ import bpy
 
 # ——————————————————————————————————————————————————
 # MARK: REGISTRATION
-# —▼————————————————————————————————————————————————
+# ——————————————————————————————————————————————————
 
 
 # Classes Blender should know about go in this list

@@ -4,7 +4,7 @@ from bpy.props import FloatProperty, IntProperty
 
 # ——————————————————————————————————————————————————
 # MARK: PROPERTIES
-# —▼————————————————————————————————————————————————
+# ——————————————————————————————————————————————————
 
 
 class HelloWorldProperties(bpy.types.PropertyGroup):
@@ -14,7 +14,7 @@ class HelloWorldProperties(bpy.types.PropertyGroup):
 
 # ——————————————————————————————————————————————————
 # MARK: INTERFACE
-# —▼————————————————————————————————————————————————
+# ——————————————————————————————————————————————————
 
 
 class TEMPLATE_PT_hello_world_panel(bpy.types.Panel):
@@ -37,7 +37,7 @@ class TEMPLATE_PT_hello_world_panel(bpy.types.Panel):
 
 # ——————————————————————————————————————————————————
 # MARK: OPERATORS
-# —▼————————————————————————————————————————————————
+# ——————————————————————————————————————————————————
 
 
 class TEMPLATE_OT_hello_world_operator(bpy.types.Operator):

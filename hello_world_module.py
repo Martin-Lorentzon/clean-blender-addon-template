@@ -43,7 +43,7 @@ class TEMPLATE_PT_hello_world_panel(bpy.types.Panel):
 class TEMPLATE_OT_hello_world_operator(bpy.types.Operator):
     bl_idname = "template.hello_world"  # {category}.{operator_name}
     bl_label = "Minimal Operator"
-    bl_context = "objectmode"  # Optional for limiting access to the panel to a certain context
+    bl_context = "objectmode"  # Optional for limiting access to the operator to a certain context
     bl_options = {"REGISTER", "UNDO"}  # Some operators shouldn't include an 'UNDO' (read-only and temporary UI e.g)
     # bl_options = {"INTERNAL"}        # ...this would be more suitable in such cases
 

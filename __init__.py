@@ -1,44 +1,52 @@
 bl_info = {
     "name": "Template Add-on Name",
-    "description": "Template add-on description",
+    "description": "Template add-on description.",
     "author": "Your Name",
     "version": (1, 0, 0),
     "blender": (4, 2, 0),
-    "location": "3D Viewport > N Panel > ...",
+    "location": "3D Viewport > N Panel > Hello World",
     # "doc_url": "https://github.com/{username}/{repo-name}",
     # "tracker_url": "https://github.com/{username}/{repo-name}/issues",
-    # "warning": "BETA Version",
     # "warning": "Pre-Release",
     "support": "COMMUNITY",
     # Try to fit into an existing category (or your company name)
     "category": "Choose a category",
 }
 
+"""
+Make sure to update package.bat with the path to your Blender executable
+"""
 
-# ——————————————————————————————————————————————————
-# IMPORTS
-# ——————————————————————————————————————————————————
+# ——————————————————————————————————————————————————————————————————————
+# MARK: IMPORTS
+# ——————————————————————————————————————————————————————————————————————
 
 
+# fmt: off
 if "bpy" in locals():
-    # Modules to reload during development go here
-    import importlib
+    from importlib import reload
 
-    importlib.reload(hello_world_module)
+    # Modules to reload during development go here
+    reload(addon_preferences)
+    reload(hello_world_module)
 else:
     # ...and here
+    from . import addon_preferences
     from . import hello_world_module
 
+# ...but not here
 import bpy
+# fmt: on
 
 
-# ——————————————————————————————————————————————————
-# REGISTRATION
-# ——————————————————————————————————————————————————
+# ——————————————————————————————————————————————————————————————————————
+# MARK: REGISTRATION
+# ——————————————————————————————————————————————————————————————————————
 
 
 # Classes Blender should know about go in this list
 classes = [
+    addon_preferences.TemplatePreferences,
     hello_world_module.HelloWorldProperties,
     hello_world_module.TEMPLATE_PT_hello_world_panel,
     hello_world_module.TEMPLATE_OT_hello_world_operator,

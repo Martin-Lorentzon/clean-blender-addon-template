@@ -1,10 +1,11 @@
 import bpy
 from bpy.props import FloatProperty, IntProperty
+from bpy.types import Panel, Operator
 
 
-# ——————————————————————————————————————————————————
-# PROPERTIES
-# ——————————————————————————————————————————————————
+# ——————————————————————————————————————————————————————————————————————
+# MARK: PROPERTIES
+# ——————————————————————————————————————————————————————————————————————
 
 
 class HelloWorldProperties(bpy.types.PropertyGroup):
@@ -12,37 +13,48 @@ class HelloWorldProperties(bpy.types.PropertyGroup):
     custom_2: IntProperty(name="My Int")
 
 
-# ——————————————————————————————————————————————————
-# USER INTERFACE
-# ——————————————————————————————————————————————————
+# ——————————————————————————————————————————————————————————————————————
+# MARK: INTERFACE
+# ——————————————————————————————————————————————————————————————————————
 
 
-class TEMPLATE_PT_hello_world_panel(bpy.types.Panel):
+class TEMPLATE_PT_hello_world_panel(Panel):
     bl_label = "Hello World"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
     bl_category = "Hello World"
-    bl_context = "object"
+    bl_context = "objectmode"  # Optional for limiting access to the panel to a certain context
 
     def draw(self, context):
-        properties = context.scene.hello_world_properties
+        props = context.scene.hello_world_properties
 
         layout = self.layout
 
         layout.label(text="Hello World")
-        layout.prop(properties, "custom_1")
-        layout.prop(properties, "custom_2")
+        layout.prop(props, "custom_1")
+        layout.prop(props, "custom_2")
+        layout.operator("template.hello_world")
+
+        header, panel = layout.panel("my_subpanel_id", default_closed=False)
+        header.label(text="My Subpanel")
+        if panel:
+            panel.label(text="Success")
 
 
-# ——————————————————————————————————————————————————
-# OPERATORS
-# ——————————————————————————————————————————————————
+# ——————————————————————————————————————————————————————————————————————
+# MARK: OPERATORS
+# ——————————————————————————————————————————————————————————————————————
 
 
-class TEMPLATE_OT_hello_world_operator(bpy.types.Operator):
-    bl_idname = "template.hello_world"  # {category}.{operator_name}
+class TEMPLATE_OT_hello_world_operator(Operator):
+    bl_idname = "template.hello_world"  # {category}.{operator_name} or {addon_name}.{operator_name}
     bl_label = "Minimal Operator"
+    bl_context = "objectmode"
+    bl_options = {"REGISTER", "UNDO"}  # Some operators shouldn't include an 'UNDO' (read-only and temporary UI e.g)
+    # bl_options = {"INTERNAL"}        # ...this would be more suitable in such cases
 
     def execute(self, context):
+        addon_prefs = context.preferences.addons[__package__]  # This is how we access the addon preferences
+
         print("Hello World")
         return {"FINISHED"}

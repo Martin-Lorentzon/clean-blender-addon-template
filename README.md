@@ -28,7 +28,8 @@ Github/
 > Add the Reload Scripts operator to your Quick Favorites Menu inside Blender
 
 ## How to use the template for your personal add-on
-1. At the top right corner of the repository page, click the Fork button
-2. You may need to select your account if you're in one or more organisations
-3. Name your repository and press Create fork
-4. 🎉 Finished! 🎉
+1. At the top right corner of the repository page, click Use this template
+2. Click Create a new repository
+3. You may need to select your account if you're in one or more organisations
+4. Name your repository and press Create repository from template
+5. 🎉 Finished! 🎉

@@ -53,6 +53,10 @@ class TEMPLATE_OT_hello_world_operator(Operator):
     bl_options = {"REGISTER", "UNDO"}  # Some operators shouldn't include an 'UNDO' (read-only and temporary UI e.g)
     # bl_options = {"INTERNAL"}        # ...this would be more suitable in such cases
 
+    @classmethod
+    def poll(cls, context) -> bool:  # The result of the poll decides whether the operator should be enabled or disabled
+        return len(context.selected_objects) > 0
+
     def execute(self, context):
         addon_prefs = context.preferences.addons[__package__]  # This is how we access the addon preferences
 

@@ -1,8 +1,7 @@
 # Clean Blender Add-on Template
-## Complete add-on structure • Reloadable in Blender • Formatted with autopep8
+## Complete structure • Reloadable in Blender • Formatted with autopep8
 
-This project is meant to be a good general starting point for Blender multifile add-on/extension development.  
-Anything non-obvious will be commented.  
+A commented template for multifile add-on development that is fully compliant with the Blender Extensions platform.  
 The project is very minimal by design.
 
 I suggest placing your add-on inside of a [script directory](https://docs.blender.org/manual/en/latest/editors/preferences/file_paths.html#script-directories) for ease of use.  
@@ -25,7 +24,7 @@ Github/
 * Includes a bat file for simple packaging
 
 > [!TIP]
-> Add the Reload Scripts operator to your Quick Favorites Menu inside Blender
+> Add the Reload Scripts operator to your Quick Favorites Menu inside of Blender
 
 ## How to use the template for your personal add-on
 1. At the top right corner of the repository page, click Use this template

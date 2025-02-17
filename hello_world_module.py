@@ -47,7 +47,7 @@ class TEMPLATE_PT_hello_world_panel(Panel):
 
 
 class TEMPLATE_OT_hello_world_operator(Operator):
-    bl_idname = "template.hello_world"  # {category}.{operator_name} or {addon_name}.{operator_name}
+    bl_idname = "scene.hello_world"  # {category}.{operator_name} (Look for supported categories that allow for keymaps)
     bl_label = "Minimal Operator"
     bl_context = "objectmode"
     bl_options = {"REGISTER", "UNDO"}  # Some operators shouldn't include an 'UNDO' (read-only and temporary UI e.g)

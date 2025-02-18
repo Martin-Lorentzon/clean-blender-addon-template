@@ -5,12 +5,12 @@ A commented template for multifile add-on development that is fully compliant wi
 The project is very minimal by design.
 
 I suggest placing your add-on inside of a [script directory](https://docs.blender.org/manual/en/latest/editors/preferences/file_paths.html#script-directories) for ease of use.  
-The script directory may be placed in your local Github directory.  
+The script directory may be placed inside of your local Github directory.
 ```
 Github/
 ├── Blender/ (script directory)
 │      └── addons/
-│            └── epic-legendary-addon/ (your local fork)
+│            └── epic-legendary-addon/
 ```
 > [!NOTE]
 > Remember to install your newly created script directory in Blender Preferences > File Paths > Script Directories
